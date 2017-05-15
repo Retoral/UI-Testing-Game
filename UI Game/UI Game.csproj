@@ -89,7 +89,6 @@
     <Compile Include="Assets\Scrips\AddMaterial.cs" />
     <Compile Include="Assets\Scrips\Material.cs" />
     <Compile Include="Assets\Scrips\ToggleScript.cs" />
-    <Compile Include="Assets\TimerBar.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
