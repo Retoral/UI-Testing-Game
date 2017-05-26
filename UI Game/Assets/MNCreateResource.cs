@@ -62,7 +62,11 @@ public class MNCreateResource : MonoBehaviour
       ListOfResources enumValue = (ListOfResources)Enum.Parse(typeof(ListOfResources), values[0], true);
       float buyPrice = float.Parse(values[1].TrimEnd(';'));
       float sellPrice = float.Parse(values[2].TrimEnd(';'));
-      _Resources.Add(enumValue, new MNResource(enumValue, buyPrice, sellPrice));
+      _Resources.Add(enumValue, new MNResource(name:            enumValue,
+                                               currentAmount:   0,
+                                               incomePerMinute: 0,
+                                               buyPrice:        buyPrice,
+                                               sellPrice:       sellPrice));
                                           
     }
 

@@ -2,15 +2,23 @@
 
 public class MNResource
 {
+  public float CurrentAmount { get; set; }
+  public float IncomePerMinute { get; set; }
+  public float BuyPrice { get; set; }
+  public float SellPRice { get; set; }
+  public float BuildTime { get; set; }
 
-  public MNResource(ListOfResources name, float currentAmount = 0, float incomePerMinute = 0)
+
+  public MNResource(ListOfResources name, float currentAmount = 0, float incomePerMinute = 0, float buyPrice = 0.0f, float sellPrice = 0.0f, float buildTime = 0.0f)
   {
     Name = name;
     CurrentAmount = currentAmount;
     IncomePerMinute = incomePerMinute;
+    BuyPrice = buyPrice;
+    SellPRice = sellPrice;
   }
 
-  public MNResource(string name, float currentAmount = 0, float incomePerMinute = 0)
+  public MNResource(string name, float currentAmount = 0.0f, float incomePerMinute = 0.0f)
   {
     try
     {
@@ -33,9 +41,6 @@ public class MNResource
       return Enum.GetName(typeof(ListOfResources), Name);
     }
   }
-
-  public float CurrentAmount { get; set; }
-  public float IncomePerMinute { get; set; }
 
   public void IncomePerMinuteTick()
   {
