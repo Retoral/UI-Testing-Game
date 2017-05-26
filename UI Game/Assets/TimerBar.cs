@@ -22,7 +22,7 @@ public class TimerBar : MonoBehaviour {
         if (Durration > 0)
         {
             float timer = Time.deltaTime;
-            Durration -= timer * ( 1+ (1/2) * IncResource.GlobalResource.Builders);
+            Durration -= timer * ( 1+ (1/2) * MNCreateResource.GlobalResources[ListOfResources.Builder].CurrentAmount);
             ProgressBar.fillAmount = Durration / MaxDurration;
             DisplayText.text = Durration.ToString("0") + "Sek";
         } if (Durration < 0)
@@ -31,30 +31,4 @@ public class TimerBar : MonoBehaviour {
 
         }
     }
-
-
-    //public void Start()
-    //{
-    //    Durration = MaxDurration;
-
-    //    UpdateBar();
-    //}
-
-    //private void UpdateBar()
-    //{
-    //    float ratio = Durration / MaxDurration;
-    //    ProgressBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-    //    RatioText.text = (Durration).ToString();
-    //}
-
-    //private void ReductionTime(float timer)
-    //{
-    //    timer = Time.deltaTime;
-    //    Durration -= timer;
-    //    if (Durration < 0)
-    //    {
-    //        Durration = 0;
-    //        Debug.Log("It's done!");
-    //    }
-    //}
 }
