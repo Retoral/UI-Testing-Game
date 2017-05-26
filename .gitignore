@@ -9,6 +9,7 @@
 /.tgitconfig
 
 ### Unity ###
+UI Game/[Ll]ibrary/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
